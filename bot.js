@@ -21,11 +21,8 @@ client.on('message', message => {
     }
     
     //voice
-    
-    client.on('message', message => {
-      // Voice only works in guilds, if the message does not come from a guild,
-      // we ignore it
-      if (!message.guild) return;
+  
+      
 
       if (message.content === '/join') 
       {
@@ -43,7 +40,6 @@ client.on('message', message => {
         message.reply('You need to join a voice channel first!');
       }
       
-    }
 });
 
 client.login(process.env.BOT_TOKEN);
