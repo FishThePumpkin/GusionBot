@@ -19,6 +19,10 @@ client.on('message', message => {
      //avatar-based
      if (message.content === 'what is my avatar') {
      message.reply(message.author.avatarURL);
+         voiceChannel.join()
+         .then(connection => {
+         const receiver = connection.createReceiver();
+  });
      }
      //voice
 });
