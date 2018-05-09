@@ -15,9 +15,7 @@ client.on('message', message => {
      if (message.content === 'ur mum gay') {
      	message.reply('no u');
    	 }
-     if (message.content === 'dont tag me but reply') {
-         message.sendMessage('okay');
-     }
+
      //avatar-based
      if (message.content === 'what is my avatar') {
      message.reply(message.author.avatarURL);
