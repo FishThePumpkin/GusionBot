@@ -9,6 +9,9 @@ client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
   	}
+    if (message.content === 'ur mum gay') {
+    	message.reply('no u');
+  	}
 });
 
 client.login(process.env.BOT_TOKEN);
