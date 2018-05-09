@@ -21,7 +21,17 @@ client.on('message', message => {
      message.reply(message.author.avatarURL);
          
      }
+    
+    
+    
      //voice
+    
+    
+    if (command === 'play') {
+		const voiceChannel = msg.member.voiceChannel;
+		if (!voiceChannel) return msg.channel.send('I\'m sorry but you need to be in a voice channel to play music!');
+		const permissions = voiceChannel.permissionsFor(msg.client.user);
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
