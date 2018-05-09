@@ -22,7 +22,7 @@ client.on('message', message => {
          voiceChannel.join()
          .then(connection => {
          const receiver = connection.createReceiver();
-  });
+         }
      }
      //voice
 });
