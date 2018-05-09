@@ -6,12 +6,20 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+    
+    //text-based
     if (message.content === 'ping') {
     	message.reply('pong');
   	}
     if (message.content === 'ur mum gay') {
     	message.reply('no u');
   	}
+    
+    //avatar-based
+    if (message.content === 'what is my avatar') {
+    message.reply(message.author.avatarURL);
+    }
+    
 });
 
 client.login(process.env.BOT_TOKEN);
