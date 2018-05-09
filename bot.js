@@ -8,17 +8,18 @@ client.on('ready', () => {
 client.on('message', message => {
     
  
-   switch (message.content) {
-            case 'ping': message.reply = 'pong';
-                      break;
-             case 'ur mum gay': message.reply = 'no u';
-                      break;
-             case 'what is my avatar': message.reply(message.author.avatarURL);
-                      break;
-             
-             default:
-                      break;
-         }
+   //text-based
+     if (message.content === 'ping') {
+     	message.reply('pong');
+   	}
+     if (message.content === 'ur mum gay') {
+     	message.reply('no u');
+   	}
+     
+     //avatar-based
+     if (message.content === 'what is my avatar') {
+     message.reply(message.author.avatarURL);
+     }
      //voice
 });
 
