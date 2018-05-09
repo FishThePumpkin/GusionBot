@@ -24,7 +24,7 @@ client.on('message', message => {
     //voice based
     if (!message.guild) return;
 
-    if (message.content === '/join') {
+    if (message.content === 'Gusion join vc with me!') {
         if (message.member.voiceChannel) {
         message.member.voiceChannel.join()
             .then(connection => { 
