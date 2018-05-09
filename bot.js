@@ -27,7 +27,7 @@ client.on('message', message => {
      //voice
     
     
-    if (command === 'play') {
+    if (message.content === 'play') {
 		const voiceChannel = msg.member.voiceChannel;
 		if (!voiceChannel) return msg.channel.send('I\'m sorry but you need to be in a voice channel to play music!');
 		const permissions = voiceChannel.permissionsFor(msg.client.user);
