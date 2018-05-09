@@ -20,6 +20,20 @@ client.on('message', message => {
     message.reply(message.author.avatarURL);
     }
     
+    
+    //voice based
+    if (!message.guild) return;
+
+    if (message.content === '/join') {
+        if (message.member.voiceChannel) {
+        message.member.voiceChannel.join()
+            .then(connection => { 
+            message.reply('Yay I have connected!');
+        })
+        .catch(console.log);
+    } else {
+      message.reply('>-< I will only join one if you join one first!');
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
