@@ -12,9 +12,10 @@ client.on('message', message => {
      if (message.content === 'ping') {
      	message.reply('pong');
    	 }
-     if (message.content === 'ur mum gay') {
-     	message.reply('no u');
+     if (message.content === 'how are you') {
+     	message.reply('i am good');
    	 }
+    
 
      //avatar-based
      if (message.content === 'what is my avatar') {
